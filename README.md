@@ -1,4 +1,4 @@
-# Lab8-3D Segmentation
+# Lab8 - 3D Segmentation
 This lab is an extension of what we learned 2 weeks ago, but using a different kind of data. We will use a method we designed for semantic segmentation of 3D medical images, especifically for the tasks of brain tumor (multimodal MRI), kidney and kidney tumor (CT) segmentation, and we will apply it to the task of left atrium segmentation in single-modality MRI.
 
 ## Brain Tumor Segmentation
