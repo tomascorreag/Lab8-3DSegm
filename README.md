@@ -13,10 +13,13 @@ There are more than 400,000 new cases of kidney cancer each year [2], and surger
 
 ### Left Atrium Segmentation
 
+<p align="center"><img src="https://www.cardiacatlas.org/wp-content/uploads/2015/11/la_segmentation_figure.png" width="400"/></p>
+
+
 The left atrium is clinically important for the management of atrial fibrillation in patients. Segmentation can be used to generate anatomical models that can be employed in guided treatment and also more recently for cardiac biophysical modelling. [7]
 
 ## This lab
-You will run the codes I gave you in that new dataset and use those results as baseline. After that, you will perform **any experiment you want** (changes in the architecture ore training schedule and parameters) to see how much you can improve. The important thing here is that I want a complete (at least 6 results beside the baseline) and logical experimental framework. In other words, I want to know why you did what you did and why you thought it would work. Finally, I want you to validate the best method you obtain using 4 fold cross-validation.
+You will run the codes I gave you in that new dataset and use those results as baseline. After that, you will perform **any experiment you want** (changes in the architecture or training schedule and parameters) to see how much you can improve. The important thing here is that I want a complete (at least 6 results beside the baseline) and logical experimental framework. In other words, I want to know why you did what you did and why you thought it would work. Finally, I want you to validate the best method you obtain using 4 fold cross-validation.
 
 Dataset:
 You don't have to download it, the Data is already stored in the machine (if we can bring Malik back to life soon, I will store the data in that folder)
