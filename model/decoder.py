@@ -29,7 +29,7 @@ class Decoder(nn.Module):
         self.conv3 = block(filters[3], filters[2], Norm_layer)
         self.conv4 = block(filters[2], filters[1], Norm_layer)
         self.conv5 = block(filters[1], filters[0], Norm_layer,
-                           kernel_size=(1, 2, 2), stride=(1, 2, 2))
+                           kernel_size=(2, 2, 1), stride=(2, 2, 1))
         self.final = nn.Conv3d(
             filters[0], num_classes, kernel_size=1, padding=0, bias=False)
         self._init_weight()
