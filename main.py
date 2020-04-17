@@ -201,7 +201,7 @@ def train(args, model, loader, optimizer, criterion):
     print_stats = len(loader) // 2
     for batch_idx, sample in enumerate(loader):
         data = Variable(sample['data'].float()).cuda()
-        target = Variable(sample['target'].long()).cuda()
+        target = Variable(sample['target'].long()).squeeze_(1).cuda()
 
         out = model(data)
         loss = criterion(out, target)
