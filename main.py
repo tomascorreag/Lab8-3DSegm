@@ -150,7 +150,7 @@ def main():
             val_loss, acc = val(args, model, val_loader, criterion, metrics)
 
             acc = acc.item()
-            out_file.write('{},{},{},{},{}\n'.format(
+            out_file.write('{},{},{},{}\n'.format(
                 args.epoch, train_loss, val_loss, acc))
             out_file.flush()
 
