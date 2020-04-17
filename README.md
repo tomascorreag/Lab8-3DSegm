@@ -31,6 +31,7 @@ BCV001: /media/user_home2/vision2020_01/Data
 ### Libraries
 To read the data:
 ```conda install -c conda-forge nibabel```
+
 Apex: 
 https://github.com/NVIDIA/apex
 
