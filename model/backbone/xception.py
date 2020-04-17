@@ -82,7 +82,7 @@ class AlignedXception(nn.Module):
         self.bn2 = Norm_layer(filters[0], affine=True)
 
         self.block0 = Block(filters[0], filters[1], Norm_layer, reps=2,
-                            stride=[1, 2, 2], start_with_relu=False)
+                            stride=[2, 2, 1], start_with_relu=False)
         self.block1 = Block(filters[1], filters[2], Norm_layer, reps=2,
                             stride=2)
         self.block2 = Block(filters[2], filters[3], Norm_layer, reps=3,
