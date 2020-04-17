@@ -231,7 +231,7 @@ def val(args, model, loader, criterion, metrics):
 
     for batch_idx, sample in enumerate(loader):
         data = Variable(sample['data'].float()).cuda()
-        target = Variable(sample['target'].long()).cuda()
+        target = Variable(sample['target'].long()).squeeze_(1).cuda()
 
         with torch.no_grad():
             out = model(data)
