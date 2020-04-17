@@ -132,8 +132,8 @@ class tversky_loss(nn.Module):
 
         dims = tuple(range(2, targets.ndimension()))
         tps = torch.sum(inputs * targets, dims)
-        fps = torch.sum(inputs * (1 - targets), dims)
-        fns = torch.sum((1 - inputs) * targets, dims)
+        fps = torch.sum(inputs * (1 - targets), dims) * self.alpha
+        fns = torch.sum((1 - inputs) * targets, dims) * self.beta
         loss = (2 * tps + self.smooth) / (2 * tps + fps + fns + self.smooth)
         loss = torch.mean(loss, dim=0)
         return 1 - (loss[1:]).mean()
