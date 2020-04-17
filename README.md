@@ -28,6 +28,16 @@ Malik: /media/sda1/vision2020_01/Data
 BCV001: /media/user_home2/vision2020_01/Data
 ```
 
+### Libraries
+To read the data:
+```conda install -c conda-forge nibabel```
+Apex: 
+https://github.com/NVIDIA/apex
+
+If you want to do data augmentation I recommend this library:
+https://github.com/MIC-DKFZ/batchgenerators
+
+
 ## References
 1. B. H. Menze, A. Jakab, S. Bauer, J. Kalpathy-Cramer, K. Farahani, J. Kirby, et al. "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)", IEEE Transactions on Medical Imaging 34(10), 1993-2024 (2015) DOI: 10.1109/TMI.2014.2377694
 https://towardsdatascience.com/review-deeplabv1-deeplabv2-atrous-convolution-semantic-segmentation-b51c5fbde92d
@@ -39,4 +49,4 @@ https://towardsdatascience.com/review-deeplabv1-deeplabv2-atrous-convolution-sem
 7. Tobon-Gomez C, Geers AJ, Peters, J, Weese J, Pinto K, Karim R, Ammar M, Daoudi A, Margeta J, Sandoval Z, Stender B, Zheng Y, Zuluaga, MA, Betancur J, Ayache N, Chikh MA, Dillenseger J-L, Kelm BM, Mahmoudi S, Ourselin S, Schlaefer A, Schaeffter T, Razavi R, Rhode KS. Benchmark for Algorithms Segmenting the Left Atrium From 3D CT and MRI Datasets. IEEE Transactions on Medical Imaging, 34(7):1460–1473, 2015.
 
 ## Deadline
-April 15, 11:59pm
+April 29, 11:59pm
