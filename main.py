@@ -253,9 +253,9 @@ def test(args, model, loader, save_path, test_file):
     model.eval()
 
     # Add more weight to the central voxels
-    w_patch = torch.zeros(args.patch_size)
+    w_patch = np.zeros(args.patch_size)
+    sigmas = np.asarray(args.patch_size) // 8
     center = torch.Tensor(args.patch_size) // 2
-    sigmas = torch.Tensor(args.patch_size) // 8
     w_patch[tuple(center.long())] = 1
     w_patch = gaussian_filter(w_patch, sigmas, 0, mode='constant', cval=0)
     w_patch = w_patch / w_patch.max()
@@ -271,7 +271,7 @@ def test(args, model, loader, save_path, test_file):
             low = (voxel - center).long()
             up = (voxel + center).long()
             with torch.no_grad():
-                output = model(data.cuda(), False).cpu().numpy()[0]
+                output = model(data.cuda()).cpu().numpy()[0]
             output *= w_patch
             prediction[:, low[0]:up[0], low[1]:up[1], low[2]:up[2]] += output
             weights[low[0]:up[0], low[1]:up[1], low[2]:up[2]] += w_patch
