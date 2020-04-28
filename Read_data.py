@@ -12,7 +12,7 @@ from torch.utils.data import Dataset
 class MRIdataset(Dataset):
     def __init__(self, train, csv_file, root_dir, patch_size, val=False):
         super(MRIdataset, self).__init__()
-        self.filenames = pd.read_csv('Paths/' + csv_file)
+        self.filenames = pd.read_csv(csv_file)
         self.root_dir = root_dir
         self.train = train
         self.val = val
