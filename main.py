@@ -67,7 +67,7 @@ def main():
     if args.load_path is not None:
         load_path = os.path.join('TRAIN/', args.load_path)
 
-    root = 'Heart'
+    root = '../../Data/Heart'
     train_file = 'train_paths.csv'
     test_file = 'val_paths.csv'
 
