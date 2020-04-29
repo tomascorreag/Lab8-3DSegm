@@ -6,6 +6,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+#from batchgenerators.dataloading.data_loader import DataLoaderBase
 
 def get_lr(optimizer):
     for param_group in optimizer.param_groups:
@@ -149,3 +150,5 @@ class segmentation_loss(nn.Module):
         dice = self.dice(inputs, targets.contiguous())
         ce = self.ce(inputs, targets)
         return dice + ce
+
+#class AugmentedDataLoader(DataLoaderBase):
