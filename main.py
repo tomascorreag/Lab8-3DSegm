@@ -46,6 +46,8 @@ def main():
                         help='Name of the folder with the pretrained model')
     parser.add_argument('--ft', action='store_true', default=False,
                         help='Fine-tune a model')
+    parser.add_argument('--psFactor', type=float, default=1,
+                        help='Fine-tune a model')
 
     parser.add_argument('--gpu', type=str, default='0',
                         help='GPU(s) to use (default: 0)')
@@ -57,7 +59,7 @@ def main():
     if args.ft:
         args.resume = True
 
-    args.patch_size = [128, 128, 96]
+    args.patch_size = [int(128*args.psFactor), int(128*args.psFactor), int(96*args.psFactor)]
     args.num_classes = 2
 
     # PATHS AND DIRS
