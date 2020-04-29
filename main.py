@@ -251,7 +251,7 @@ def val(args, model, loader, criterion, metrics):
 
 
 def test(args, model, loader, save_path, test_file):
-    patients = pd.read_csv('Paths/' + test_file)
+    patients = pd.read_csv(test_file)
     model.eval()
 
     # Add more weight to the central voxels
